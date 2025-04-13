@@ -3,7 +3,7 @@ package Bai6_WebElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import test.LocatorElement.LocatorCRM;
+import LocatorElement.LocatorCRM;
 
 import java.time.Duration;
 
@@ -22,13 +22,13 @@ public class DemoWebElement {
         //driver.findElement(By.xpath(LocatorCRM.buttomLogin)).click();
 
         //System.out.println(driver.findElement(By.xpath(LocatorCRM.alertErrorMessage)).isDisplayed());
-        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttomLogin)).getCssValue("background-color"));
-        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttomLogin)).getAttribute("type"));
+        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttonLogin)).getCssValue("background-color"));
+        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttonLogin)).getAttribute("type"));
         System.out.println(driver.findElement(By.xpath(LocatorCRM.inputEmail)).getAttribute("value"));
-        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttomLogin)).getSize());
-        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttomLogin)).getSize().height);
-        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttomLogin)).getCssValue("weight"));
-        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttomLogin)).getLocation());
+        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttonLogin)).getSize());
+        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttonLogin)).getSize().height);
+        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttonLogin)).getCssValue("weight"));
+        System.out.println(driver.findElement(By.xpath(LocatorCRM.buttonLogin)).getLocation());
         //        driver.get("https://anhtester.com/");
 //        System.out.println("isDisplayed: " + driver.findElement(By.xpath("//h1[normalize-space() = 'Anh Tester Automation Testing']")).isDisplayed());
 //        System.out.println("isDisplayed: " + driver.findElement(By.xpath("//a[@id = 'btn-login']")).isDisplayed());

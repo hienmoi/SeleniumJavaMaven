@@ -1,4 +1,4 @@
-package test.LocatorElement;
+package LocatorElement;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class ThuocTinhHTML {
+public class XpathTuyetDoi {
     public static void main(String[] args) throws InterruptedException {
         //Setup trình duyệt
         WebDriver driver; //Khai báo biến driver
@@ -19,25 +19,14 @@ public class ThuocTinhHTML {
         driver.get("https://crm.anhtester.com/admin/authentication");//Mở trang web
         Thread.sleep(1000);
         //Điền email
-        driver.findElement(By.id("email")).sendKeys("admin@example.com");
+        driver.findElement(By.xpath("/html/body/div/div[2]/form/div[1]/input")).sendKeys("admin@example.com");
         Thread.sleep(1000);
         //Điền pass
-        driver.findElement(By.name("password")).sendKeys("123456");
+        driver.findElement(By.xpath("/html/body/div/div[2]/form/div[2]/input")).sendKeys("123456");
         Thread.sleep(1000);
-
-        driver.findElement(By.tagName("button")).click();
-
-        //driver.findElement(By.linkText("Forgot Password?")).click();
-        //driver.findElement(By.partialLinkText("Password")).click();
+        //Click login
+        driver.findElement(By.xpath("/html/body/div/div[2]/form/div[4]/button")).click();
         Thread.sleep(2000);
-        //Click nút Login
-//        driver.findElement(By.className("btn-primary")).click();
-//        Thread.sleep(2000);
-//
-//        driver.findElement(By.id("search_input")).sendKeys("Ahihi");
-//        Thread.sleep(2000);
-
-
         //Tắt trình duyệt
         driver.quit();
     }
